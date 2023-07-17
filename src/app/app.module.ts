@@ -8,6 +8,8 @@ import { ProductoRegistroComponent } from './components/productos/producto-regis
 import { ClienteListadoComponent } from './components/clientes/cliente-listado/cliente-listado.component';
 import { ClienteRegistroComponent } from './components/clientes/cliente-registro/cliente-registro.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { ClienteRegistroComponent } from './components/clientes/cliente-registro
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

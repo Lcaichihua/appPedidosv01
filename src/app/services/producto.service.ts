@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,13 @@ import { Injectable } from '@angular/core';
 })
 export class ProductoService {
 
-  constructor() { }
+   url ='http://localhost:8080/productos/nombre?nombre';
+  constructor(private http:HttpClient ) {
+    
+   }
+
+  findByLikeObject(nombre:string){
+    this.http.get(this.url+'/by/nombre?nombre='+nombre)
+
+  }
 }
