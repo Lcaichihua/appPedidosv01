@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Producto } from '../interfaces/producto';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +13,8 @@ export class ProductoService {
     
    }
 
-  findByLikeObject(nombre:string){
-    this.http.get(this.url+'/by/nombre?nombre='+nombre)
+  findByLikeObject(nombre:string):Observable<Producto[]>{
+    return this.http.get<Producto[]>(this.url+'/by/nombre?nombre='+nombre)
 
   }
 }
