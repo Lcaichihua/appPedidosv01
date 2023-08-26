@@ -8,13 +8,14 @@ import { Observable } from 'rxjs';
 })
 export class ProductoService {
 
-   url ='http://localhost:8080/productos/nombre?nombre';
+   url ='http://localhost:8080/productos';
+   
+   //inyectando httpclient
   constructor(private http:HttpClient ) {
     
    }
 
-  findByLikeObject(nombre:string):Observable<Producto[]>{
-    return this.http.get<Producto[]>(this.url+'/by/nombre?nombre='+nombre)
-
+  buscar(nombre:string):Observable<Producto[]>{
+    return this.http.get<Producto[]>(this.url+'/nombre?nombre='+nombre)
   }
 }
