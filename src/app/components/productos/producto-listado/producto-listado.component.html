@@ -1,0 +1,30 @@
+<div class= "mt-3">
+<div class="row">
+    <div class="col-sm-12">
+        <p>customer-list works!</p>
+<div>
+    <div class="row">
+<div class="col-sm-12">
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Id</th>
+<th scope="col">Nombre</th>
+<th scope="col">Precio</th> 
+<th scope="col">Stock</th> 
+
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let producto of productos">
+    <th scope="row">{{producto.id}}</th>
+    <td> {{producto.nombre}} <td>
+    <td> {{producto.precio}}</td> 
+    <td> {{producto.stock}}</td>
+    
+<tr>
+</tbody> 
+</table>
+</div>
+</div>
+</div>
