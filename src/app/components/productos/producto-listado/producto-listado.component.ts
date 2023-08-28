@@ -17,6 +17,10 @@ export class ProductoListadoComponent implements OnInit {
   ngOnInit(): void {
   this.buscar()
   }
+
+  nuevo(){
+    
+  }
   buscar(){
 this.productoService.buscar('').subscribe(
   {

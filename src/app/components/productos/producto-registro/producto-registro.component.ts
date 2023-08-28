@@ -12,4 +12,5 @@ export class ProductoRegistroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }
