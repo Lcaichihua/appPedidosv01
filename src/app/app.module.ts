@@ -9,6 +9,7 @@ import { ClienteListadoComponent } from './components/clientes/cliente-listado/c
 import { ClienteRegistroComponent } from './components/clientes/cliente-registro/cliente-registro.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     //importaciones personalizados
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

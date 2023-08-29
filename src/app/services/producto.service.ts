@@ -18,4 +18,7 @@ export class ProductoService {
   buscar(nombre:string):Observable<Producto[]>{
     return this.http.get<Producto[]>(this.url+'/nombre?nombre='+nombre)
   }
+  registrar(producto:Producto):Observable<Producto>{
+    return this.http.post<Producto>(this.url,producto)
+  }
 }
