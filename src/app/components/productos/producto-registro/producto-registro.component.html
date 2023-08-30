@@ -1,33 +1,50 @@
 <div class="container">
-<form>
+  <form [formGroup]="frmRegistro" (ngSubmit)="registrar()">
     <div class="row">
-        <div class="col-sm-10">
-<div class="mb-3">
-    <label for="nombre" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="nombre">
-</div>
-</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-5">
-  <div class="mb-3">
-    <label for="precio" class="form-label">Precio</label>
-    <input type="text" class="form-control" id="precio">
-  </div>
+      <div class="col-sm-10">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            formControlName="nombre"
+            class="form-control"
+            id="nombre"
+          />
+        </div>
+      </div>
     </div>
-    <div class="col-sm-5">
-  <div class="mb-3">
-    <label for="stock" class="form-label">Stock</label>
-    <input type="text" class="form-control" id="stock">
-  </div>
-  </div>
-  </div>
-  <div>
-    <div class="col-sm-4">
-        <button type="button" class="btn btn-primary" title="Grabar">Grabar</button>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="mb-3">
+          <label for="precio" class="form-label">Precio</label>
+          <input
+            type="text"
+            formControlName="precio"
+            class="form-control"
+            id="precio"
+          />
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="mb-3">
+          <label for="stock" class="form-label">Stock</label>
+          <input
+            type="text"
+            formControlName="stock"
+            class="form-control"
+            id="stock"
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="col-sm-4">
+        <button type="submit" class="btn btn-primary" title="Grabar">
+          Grabar
+        </button>
         <button type="button" class="btn btn-secondary">Limpiar</button>
         <button type="button" class="btn btn-success">Cancelar</button>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
 </div>
